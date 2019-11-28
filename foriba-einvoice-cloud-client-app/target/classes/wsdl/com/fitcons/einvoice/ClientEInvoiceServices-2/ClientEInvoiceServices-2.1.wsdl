@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- ©2015 FIT Consulting -->
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http:/fitcons.com/eInvoice/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http:/fitcons.com/eInvoice/">
+	<wsdl:types>
+		<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http:/fitcons.com/eInvoice/">
+			<xs:include schemaLocation="./Schemas/ClientEInvoiceServices-2.1_importedschema_1.xsd"/>
+			<xs:include schemaLocation="./Schemas/ClientEInvoiceServices-2.1_importedschema_2.xsd"/>
+			<xs:include schemaLocation="./Schemas/ClientEInvoiceServices-2.1_importedschema_3.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="sendUBLRequestMessage">
+		<wsdl:part element="tns:sendUBLRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendUBLResponseMessage">
+		<wsdl:part element="tns:sendUBLResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendUBLFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUBLListRequestMessage">
+		<wsdl:part element="tns:getUBLListRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUBLListResponseMessage">
+		<wsdl:part element="tns:getUBLListResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUBLListFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUBLRequestMessage">
+		<wsdl:part element="tns:getUBLRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUBLResponseMessage">
+		<wsdl:part element="tns:getUBLResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUBLFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getEnvelopeStatusRequestMessage">
+		<wsdl:part element="tns:getEnvelopeStatusRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getEnvelopeStatusResponseMessage">
+		<wsdl:part element="tns:getEnvelopeStatusResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getEnvelopeStatusFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceViewRequestMessage">
+		<wsdl:part element="tns:getInvoiceViewRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceViewResponseMessage">
+		<wsdl:part element="tns:getInvoiceViewResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceViewFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUserListRequestMessage">
+		<wsdl:part element="tns:getUserListRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUserListResponseMessage">
+		<wsdl:part element="tns:getUserListResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getUserListFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getRAWUserListRequestMessage">
+		<wsdl:part element="tns:getRAWUserListRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getRAWUserListResponseMessage">
+		<wsdl:part element="tns:getRAWUserListResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getRAWUserListFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvResponsesRequestMessage">
+		<wsdl:part element="tns:getInvResponsesRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvResponsesResponseMessage">
+		<wsdl:part element="tns:getInvResponsesResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvResponsesFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendInvoiceListRequestMessage">
+		<wsdl:part element="tns:sendInvoiceListRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendInvoiceListResponseMessage">
+		<wsdl:part element="tns:sendInvoiceListResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendInvoiceListFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceListRequestMessage">
+		<wsdl:part element="tns:getInvoiceListRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceListResponseMessage">
+		<wsdl:part element="tns:getInvoiceListResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceListFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendARRequestMessage">
+		<wsdl:part element="tns:sendARRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendARResponseMessage">
+		<wsdl:part element="tns:sendARResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="sendARFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceStatusRequestMessage">
+		<wsdl:part element="tns:getInvoiceStatusRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceStatusResponseMessage">
+		<wsdl:part element="tns:getInvoiceStatusResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="getInvoiceStatusFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="storeUBLRequestMessage">
+		<wsdl:part element="tns:storeUBLRequest" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="storeUBLResponseMessage">
+		<wsdl:part element="tns:storeUBLResponse" name="parameter"/>
+	</wsdl:message>
+	<wsdl:message name="storeUBLFaultMessage">
+		<wsdl:part element="tns:ProcessingFault" name="parameter"/>
+	</wsdl:message>
+	<wsdl:portType name="ClientEInvoiceServicesPort">
+		<wsdl:operation name="sendUBL">
+			<wsdl:input message="tns:sendUBLRequestMessage"/>
+			<wsdl:output message="tns:sendUBLResponseMessage"/>
+			<wsdl:fault message="tns:sendUBLFaultMessage" name="sendUBLFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getUBLList">
+			<wsdl:input message="tns:getUBLListRequestMessage"/>
+			<wsdl:output message="tns:getUBLListResponseMessage"/>
+			<wsdl:fault message="tns:getUBLListFaultMessage" name="getUBLListFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getUBL">
+			<wsdl:input message="tns:getUBLRequestMessage"/>
+			<wsdl:output message="tns:getUBLResponseMessage"/>
+			<wsdl:fault message="tns:getUBLFaultMessage" name="getUBLFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getEnvelopeStatus">
+			<wsdl:input message="tns:getEnvelopeStatusRequestMessage"/>
+			<wsdl:output message="tns:getEnvelopeStatusResponseMessage"/>
+			<wsdl:fault message="tns:getEnvelopeStatusFaultMessage" name="getEnvelopeStatusFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getInvoiceView">
+			<wsdl:input message="tns:getInvoiceViewRequestMessage"/>
+			<wsdl:output message="tns:getInvoiceViewResponseMessage"/>
+			<wsdl:fault message="tns:getInvoiceViewFaultMessage" name="getInvoiceViewFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getUserList">
+			<wsdl:input message="tns:getUserListRequestMessage"/>
+			<wsdl:output message="tns:getUserListResponseMessage"/>
+			<wsdl:fault message="tns:getUserListFaultMessage" name="getUserListFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getRAWUserList">
+			<wsdl:input message="tns:getRAWUserListRequestMessage"/>
+			<wsdl:output message="tns:getRAWUserListResponseMessage"/>
+			<wsdl:fault message="tns:getRAWUserListFaultMessage" name="getRAWUserListFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getInvResponses">
+			<wsdl:input message="tns:getInvResponsesRequestMessage"/>
+			<wsdl:output message="tns:getInvResponsesResponseMessage"/>
+			<wsdl:fault message="tns:getInvResponsesFaultMessage" name="getInvResponsesFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="sendInvoiceList">
+			<wsdl:input message="tns:sendInvoiceListRequestMessage" name="sendInvoiceListRequest"/>
+			<wsdl:output message="tns:sendInvoiceListResponseMessage" name="sendInvoiceListResponse"/>
+			<wsdl:fault message="tns:sendInvoiceListFaultMessage" name="sendInvoiceListFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getInvoiceList">
+			<wsdl:input message="tns:getInvoiceListRequestMessage"/>
+			<wsdl:output message="tns:getInvoiceListResponseMessage"/>
+			<wsdl:fault message="tns:getInvoiceListFaultMessage" name="getInvoiceListFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="sendAR">
+			<wsdl:input message="tns:sendARRequestMessage" name="sendARRequest"/>
+			<wsdl:output message="tns:sendARResponseMessage" name="sendARResponse"/>
+			<wsdl:fault message="tns:sendARFaultMessage" name="sendARFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getInvoiceStatus">
+			<wsdl:input message="tns:getInvoiceStatusRequestMessage"/>
+			<wsdl:output message="tns:getInvoiceStatusResponseMessage"/>
+			<wsdl:fault message="tns:getInvoiceStatusFaultMessage" name="getInvoiceStatusFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="storeUBL">
+			<wsdl:input message="tns:storeUBLRequestMessage"/>
+			<wsdl:output message="tns:storeUBLResponseMessage"/>
+			<wsdl:fault message="tns:storeUBLFaultMessage" name="storeUBLFault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ClientEInvoiceServicesBinding" type="tns:ClientEInvoiceServicesPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="sendUBL">
+			<soap:operation soapAction="sendUBL"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="sendUBLFault">
+				<soap:fault name="sendUBLFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getUBLList">
+			<soap:operation soapAction="getUBLList"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getUBLListFault">
+				<soap:fault name="getUBLListFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getUBL">
+			<soap:operation soapAction="getUBL"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getUBLFault">
+				<soap:fault name="getUBLFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getEnvelopeStatus">
+			<soap:operation soapAction="getEnvelopeStatus"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getEnvelopeStatusFault">
+				<soap:fault name="getEnvelopeStatusFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getInvoiceView">
+			<soap:operation soapAction="getInvoiceView"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getInvoiceViewFault">
+				<soap:fault name="getInvoiceViewFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getUserList">
+			<soap:operation soapAction="getUserList"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getUserListFault">
+				<soap:fault name="getUserListFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getRAWUserList">
+			<soap:operation soapAction="getRAWUserList"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getRAWUserListFault">
+				<soap:fault name="getRAWUserListFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getInvResponses">
+			<soap:operation soapAction="getInvResponses"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getInvResponsesFault">
+				<soap:fault name="getInvResponsesFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="sendInvoiceList">
+			<soap:operation soapAction="sendInvoiceList"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="sendInvoiceListFault">
+				<soap:fault name="sendInvoiceListFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getInvoiceList">
+			<soap:operation soapAction="getInvoiceList"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getInvoiceListFault">
+				<soap:fault name="getInvoiceListFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="sendAR">
+			<soap:operation soapAction="sendAR"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="sendARFault">
+				<soap:fault name="sendARFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getInvoiceStatus">
+			<soap:operation soapAction="getInvoiceStatus"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="getInvoiceStatusFault">
+				<soap:fault name="getInvoiceStatusFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="storeUBL">
+			<soap:operation soapAction="storeUBL"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="storeUBLFault">
+				<soap:fault name="storeUBLFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ClientEInvoiceServices">
+		<wsdl:port binding="tns:ClientEInvoiceServicesBinding" name="ClientEInvoiceServicesPort">
+			<soap:address location="http://fitcons.com/eInvoice/"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
